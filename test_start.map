@@ -1,0 +1,1143 @@
+Renesas Optimizing Linker (W3.07.00 )             12-Jun-2026 13:50:29
+
+*** Options ***
+
+-MAKEUD=DefaultBuild\test_start.lk.ud
+-subcommand=DefaultBuild\test_start.clnk
+-library=DefaultBuild\test_start.lib
+-input=DefaultBuild\dbsct.obj
+-input=DefaultBuild\resetprg.obj
+-input=DefaultBuild\test_start.obj
+-input=DefaultBuild\delay.obj
+-input=DefaultBuild\except_vecttbl.obj
+-input=DefaultBuild\except_prg.obj
+-input=DefaultBuild\interrupt_prg.obj
+-input=DefaultBuild\ctsu.obj
+-input=DefaultBuild\cmt.obj
+-input=DefaultBuild\dtc.obj
+-input=DefaultBuild\ad.obj
+-input=DefaultBuild\mtu.obj
+-input=DefaultBuild\temp_cal.obj
+-input=DefaultBuild\riic_slg47011.obj
+-input=DefaultBuild\riic_master.obj
+-input=DefaultBuild\sci1.obj
+-input=DefaultBuild\crc_16.obj
+-input=DefaultBuild\key.obj
+-input=DefaultBuild\led.obj
+-input=DefaultBuild\control.obj
+-input=DefaultBuild\alarm.obj
+-input=DefaultBuild\iwdt.obj
+-noprelink
+-output=DefaultBuild\test_start.abs
+-vect=_Excep_BRK
+-list=DefaultBuild\test_start.map
+-show=symbol,total_size,vector
+-nooptimize
+-start=SU,SI,B_1,R_1,B_2,R_2,B,R/00000000,PResetPRG/0FFFF0000,C_1,C_2,C,C$DSEC,C$BSEC,C$INIT,C$VTBL,C$VECT,D_1,D_2,D,P,PIntPRG,W_1,W_2,W,L/0FFFF0100,DTCTBL_SCI1_RCV/FFFFFB6C,DTCTBL_SCI1_SND/FFFFFB70,EXCEPTVECT/0FFFFFF80,RESETVECT/0FFFFFFFC
+-rom=D=R,D_1=R_1,D_2=R_2
+-nologo
+-end
+
+*** Error information ***
+
+W0561322:Section alignment mismatch : "P"
+
+*** Mapping List ***
+
+SECTION                            START      END         SIZE   ALIGN
+SU
+                                  00000000  00000000         0   1
+SI
+                                  00000000  000001ff       200   4
+B_1
+                                  00000200  00000295        96   1
+R_1
+                                  00000296  00000296         0   1
+B_2
+                                  00000296  000002cf        3a   2
+R_2
+                                  000002d0  000002d0         0   1
+B
+                                  000002d0  0000035b        8c   4
+R
+                                  0000035c  0000035c         0   1
+PResetPRG
+                                  ffff0000  ffff006e        6f   1
+C_1
+                                  ffff0100  ffff0100         0   1
+C_2
+                                  ffff0100  ffff0100         0   1
+C
+                                  ffff0100  ffff025f       160   4
+C$DSEC
+                                  ffff0260  ffff0283        24   4
+C$BSEC
+                                  ffff0284  ffff029b        18   4
+C$INIT
+                                  ffff029c  ffff029c         0   1
+C$VTBL
+                                  ffff029c  ffff029c         0   1
+C$VECT
+                                  ffff029c  ffff069b       400   4
+D_1
+                                  ffff069c  ffff069c         0   1
+D_2
+                                  ffff069c  ffff069c         0   1
+D
+                                  ffff069c  ffff069c         0   1
+P
+                                  ffff069c  ffff1d3d      16a2   4
+PIntPRG
+                                  ffff1d3e  ffff1e70       133   1
+W_1
+                                  ffff1e71  ffff1e71         0   1
+W_2
+                                  ffff1e71  ffff1e71         0   1
+W
+                                  ffff1e71  ffff1e71         0   1
+L
+                                  ffff1e71  ffff1e71         0   1
+DTCTBL_SCI1_RCV
+                                  fffffb6c  fffffb6f         4   4
+DTCTBL_SCI1_SND
+                                  fffffb70  fffffb73         4   4
+EXCEPTVECT
+                                  ffffff80  fffffffb        7c   4
+RESETVECT
+                                  fffffffc  ffffffff         4   4
+
+*** Total Section Size ***
+
+RAMDATA SECTION:  0000035c Byte(s)
+ROMDATA SECTION:  00000624 Byte(s)
+PROGRAM SECTION:  00001844 Byte(s)
+
+*** Symbol List ***
+
+SECTION=
+FILE=                               START        END    SIZE
+  SYMBOL                            ADDR        SIZE    INFO      COUNTS  OPT
+
+SECTION=SI
+FILE=DefaultBuild\resetprg.obj
+                                  00000000  000001ff       200
+
+SECTION=B_1
+FILE=DefaultBuild\ctsu.obj
+                                  00000200  00000201         2
+  _ctsu_data_index
+                                  00000200         1   data ,g         * 
+  _ctsu_reading_fg
+                                  00000201         1   data ,g         * 
+FILE=DefaultBuild\cmt.obj
+                                  00000202  00000203         2
+  _flg_1msec
+                                  00000202         1   data ,g         * 
+  _flg_100msec
+                                  00000203         1   data ,g         * 
+FILE=DefaultBuild\mtu.obj
+                                  00000204  00000204         1
+  _capt_ovrflow_flag
+                                  00000204         1   data ,g         * 
+FILE=DefaultBuild\temp_cal.obj
+                                  00000205  00000206         2
+  _ch0_open_err
+                                  00000205         1   data ,g         * 
+  _ch1_open_err
+                                  00000206         1   data ,g         * 
+FILE=DefaultBuild\riic_master.obj
+                                  00000207  0000023b        35
+  _iic_slave_adrs
+                                  00000207         1   data ,g         * 
+  _iic_rcv_data
+                                  00000208        10   data ,g         * 
+  _iic_sd_data
+                                  00000218        20   data ,g         * 
+  _iic_sd_pt
+                                  00000238         1   data ,g         * 
+  _iic_rcv_pt
+                                  00000239         1   data ,g         * 
+  _iic_com_over_fg
+                                  0000023a         1   data ,g         * 
+  _dummy_read_fg
+                                  0000023b         1   data ,g         * 
+FILE=DefaultBuild\sci1.obj
+                                  0000023c  00000290        55
+  _rcv_data
+                                  0000023c        10   data ,g         * 
+  _rxdata
+                                  0000024c         1   data ,g         * 
+  _rcv_over
+                                  0000024d         1   data ,g         * 
+  _rcv_cnt
+                                  0000024e         1   data ,g         * 
+  _sd_data
+                                  0000024f        40   data ,g         * 
+  _send_cnt
+                                  0000028f         1   data ,g         * 
+  _send_pt
+                                  00000290         1   data ,g         * 
+FILE=DefaultBuild\crc_16.obj
+                                  00000291  00000291         1
+  _crc_16_err
+                                  00000291         1   data ,g         * 
+FILE=DefaultBuild\control.obj
+                                  00000292  00000295         4
+  _mode_run_stop
+                                  00000292         1   data ,g         * 
+  _mode_auto_manual
+                                  00000293         1   data ,g         * 
+  _pre_mode_run_stop
+                                  00000294         1   data ,g         * 
+  _pre_mode_auto_manual
+                                  00000295         1   data ,g         * 
+
+SECTION=B_2
+FILE=DefaultBuild\cmt.obj
+                                  00000296  00000299         4
+  _cmt0_cnt
+                                  00000296         2   data ,g         * 
+  _cmt1_cnt
+                                  00000298         2   data ,g         * 
+FILE=DefaultBuild\ad.obj
+                                  0000029a  0000029f         6
+  _ad_cnt
+                                  0000029a         6   data ,g         * 
+FILE=DefaultBuild\mtu.obj
+                                  000002a0  000002b9        1a
+  _motor_a_pwm_cnt
+                                  000002a0         2   data ,g         * 
+  _motor_b_pwm_cnt
+                                  000002a2         2   data ,g         * 
+  _capt_pt
+                                  000002a4         2   data ,g         * 
+  _capt_data
+                                  000002a6        14   data ,g         * 
+FILE=DefaultBuild\riic_slg47011.obj
+                                  000002ba  000002bf         6
+  _slg_buffer_0
+                                  000002ba         2   data ,g         * 
+  _slg_buffer_1
+                                  000002bc         2   data ,g         * 
+  _slg_buffer_3
+                                  000002be         2   data ,g         * 
+FILE=DefaultBuild\key.obj
+                                  000002c0  000002cf        10
+  _Key_sw
+                                  000002c0        10   data ,g         * 
+
+SECTION=B
+FILE=DefaultBuild\ctsu.obj
+                                  000002d0  000002e7        18
+  _ctsu_sr
+                                  000002d0         8   data ,g         * 
+  _ctsu_so
+                                  000002d8         8   data ,g         * 
+  _ctsu_scnt
+                                  000002e0         8   data ,g         * 
+FILE=DefaultBuild\dtc.obj
+                                  000002e8  00000307        20
+  _SCI1_RCV_DTC
+                                  000002e8        10   data ,g         * 
+  _SCI1_SND_DTC
+                                  000002f8        10   data ,g         * 
+FILE=DefaultBuild\temp_cal.obj
+                                  00000308  0000031f        18
+  _slg_ch0_temp
+                                  00000308         4   data ,g         * 
+  _slg_ch1_temp
+                                  0000030c         4   data ,g         * 
+  _slg_ch3_temp
+                                  00000310         4   data ,g         * 
+  _slg_ch0_thermo_volt
+                                  00000314         4   data ,g         * 
+  _slg_ch1_thermo_volt
+                                  00000318         4   data ,g         * 
+  _slg_ch3_thermo_volt
+                                  0000031c         4   data ,g         * 
+FILE=DefaultBuild\control.obj
+                                  00000320  00000357        38
+  _f_cnt_avg
+                                  00000320         4   data ,g         * 
+  _msec_per_rotation
+                                  00000324         4   data ,g         * 
+  _pid_pv_rpm
+                                  00000328         4   data ,g         * 
+  _pid_sv_rpm
+                                  0000032c         4   data ,g         * 
+  _pid_pv
+                                  00000330         4   data ,g         * 
+  _pid_sv
+                                  00000334         4   data ,g         * 
+  _pid_kp
+                                  00000338         4   data ,g         * 
+  _pid_i
+                                  0000033c         4   data ,g         * 
+  _pid_ts
+                                  00000340         4   data ,g         * 
+  _pid_en
+                                  00000344         4   data ,g         * 
+  _pid_en1
+                                  00000348         4   data ,g         * 
+  _pid_mv
+                                  0000034c         4   data ,g         * 
+  _pid_mv1
+                                  00000350         4   data ,g         * 
+  _pid_delta_mv
+                                  00000354         4   data ,g         * 
+FILE=_errno
+                                  00000358  0000035b         4
+  __errno
+                                  00000358         4   data ,g         * 
+
+SECTION=PResetPRG
+FILE=DefaultBuild\resetprg.obj
+                                  ffff0000  ffff006e        6f
+  _PowerON_Reset_PC
+                                  ffff0000        2e   entry,g         * 
+  _operating_frequency_set
+                                  ffff002e        41   func ,l         * 
+
+SECTION=C
+FILE=DefaultBuild\dbsct.obj
+                                  ffff0100  ffff0133        34
+  __CTBL
+                                  ffff0100        34   data ,g         * 
+FILE=DefaultBuild\temp_cal.obj
+                                  ffff0134  ffff018b        58
+  _b_const
+                                  ffff0134        28   data ,g         * 
+  _c0
+                                  ffff015c         4   data ,g         * 
+  _c1
+                                  ffff0160         4   data ,g         * 
+  _c_const
+                                  ffff0164        28   data ,g         * 
+FILE=_in_exps
+                                  ffff018c  ffff01c3        38
+  _exp_lcoef$2
+                                  ffff018c        1c   data ,l         * 
+  _exp_hcoef$1
+                                  ffff01a8        1c   data ,l         * 
+FILE=_in_logs
+                                  ffff01c4  ffff01e3        20
+  _log_coef$3
+                                  ffff01c4        20   data ,l         * 
+FILE=consts
+                                  ffff01e4  ffff023b        58
+  __IFZEROS
+                                  ffff01e4         4   data ,g         * 
+  __IFONES
+                                  ffff01e8         4   data ,g         * 
+  __HALFS
+                                  ffff01ec         4   data ,g         * 
+  __QUOTS
+                                  ffff01f0         4   data ,g         * 
+  __TWOS
+                                  ffff01f4         4   data ,g         * 
+  __FOURS
+                                  ffff01f8         4   data ,g         * 
+  __PAIS
+                                  ffff01fc         4   data ,g         * 
+  __2PAIS
+                                  ffff0200         4   data ,g         * 
+  __HLFPAIS
+                                  ffff0204         4   data ,g         * 
+  __QUOPAIS
+                                  ffff0208         4   data ,g         * 
+  __LOGE2S
+                                  ffff020c         4   data ,g         * 
+  __NIFZEROS
+                                  ffff0210         4   data ,g         * 
+  __NIFONES
+                                  ffff0214         4   data ,g         * 
+  __NHALFS
+                                  ffff0218         4   data ,g         * 
+  __NQUOTS
+                                  ffff021c         4   data ,g         * 
+  __NTWOS
+                                  ffff0220         4   data ,g         * 
+  __NFOURS
+                                  ffff0224         4   data ,g         * 
+  __NPAIS
+                                  ffff0228         4   data ,g         * 
+  __N2PAIS
+                                  ffff022c         4   data ,g         * 
+  __NHLFPAIS
+                                  ffff0230         4   data ,g         * 
+  __NQUOPAIS
+                                  ffff0234         4   data ,g         * 
+  __NLOGE2S
+                                  ffff0238         4   data ,g         * 
+FILE=_const
+                                  ffff023c  ffff025f        24
+  __IFNAND
+                                  ffff023c         0   none ,g         * 
+  __IFINFD
+                                  ffff0244         0   none ,g         * 
+  __NIFINFD
+                                  ffff024c         0   none ,g         * 
+  __IFNANS
+                                  ffff0254         0   none ,g         * 
+  __IFINFS
+                                  ffff0258         0   none ,g         * 
+  __NIFINFS
+                                  ffff025c         0   none ,g         * 
+
+SECTION=C$DSEC
+FILE=DefaultBuild\dbsct.obj
+                                  ffff0260  ffff0283        24
+  __DTBL
+                                  ffff0260        24   data ,g         * 
+
+SECTION=C$BSEC
+FILE=DefaultBuild\dbsct.obj
+                                  ffff0284  ffff029b        18
+  __BTBL
+                                  ffff0284        18   data ,g         * 
+
+SECTION=C$VECT
+FILE=DefaultBuild\dbsct.obj
+                                  ffff029c  ffff069b       400
+
+SECTION=P
+FILE=DefaultBuild\test_start.obj
+                                  ffff069c  ffff07be       123
+  _main
+                                  ffff069c        bf   func ,g         * 
+  _un_used_port
+                                  ffff075b        1c   func ,g         * 
+  _clear_module_stop
+                                  ffff0777        48   func ,g         * 
+FILE=DefaultBuild\delay.obj
+                                  ffff07c0  ffff07d0        11
+  _delay_msec
+                                  ffff07c0        11   func ,g         * 
+FILE=DefaultBuild\except_prg.obj
+                                  ffff07d1  ffff07f1        21
+  _Excep_SuperVisorInst
+                                  ffff07d1         3   func ,g         * 
+  _Excep_AccessInst
+                                  ffff07d4         3   func ,g         * 
+  _Excep_UndefinedInst
+                                  ffff07d7         3   func ,g         * 
+  _Excep_FloatingPoint
+                                  ffff07da         3   func ,g         * 
+  _NonMaskableInterrupt
+                                  ffff07dd        12   func ,g         * 
+  _Dummy
+                                  ffff07ef         3   func ,g         * 
+FILE=DefaultBuild\ctsu.obj
+                                  ffff07f2  ffff0a06       215
+  _Excep_CTSU_CTSUWR
+                                  ffff07f2        2e   func ,g         * 
+  _Excep_CTSU_CTSURD
+                                  ffff0820        33   func ,g         * 
+  _Excep_CTSU_CTSUFN
+                                  ffff0853        1f   func ,g         * 
+  _ctsu_self_set
+                                  ffff0872        3f   func ,g         * 
+  _set_ctsu_so
+                                  ffff08b1        11   func ,g         * 
+  _ctsu_ini
+                                  ffff08c2        12   func ,g         * 
+  _ctsu_cra_set
+                                  ffff08d4        9e   func ,g         * 
+  _ctsu_crb_set
+                                  ffff0972        3f   func ,g         * 
+  _ctsu_ch_enable
+                                  ffff09b1        1e   func ,g         * 
+  _tscap_clear
+                                  ffff09cf        14   func ,g         * 
+  _touch_port_set
+                                  ffff09e3        24   func ,g         * 
+FILE=DefaultBuild\cmt.obj
+                                  ffff0a07  ffff0ad6        d0
+  _Excep_CMT0_CMI0
+                                  ffff0a07        30   func ,g         * 
+  _Excep_CMT1_CMI1
+                                  ffff0a37        2e   func ,g         * 
+  _cmt_ch0_start
+                                  ffff0a65        2f   func ,g         * 
+  _cmt_ch1_start
+                                  ffff0a94        43   func ,g         * 
+FILE=DefaultBuild\dtc.obj
+                                  ffff0ad7  ffff0b3c        66
+  _initDTC
+                                  ffff0ad7        17   func ,g         * 
+  _set_dtc_sci1_snd
+                                  ffff0aee        2b   func ,g         * 
+  _set_dtc_sci1_rcv
+                                  ffff0b19        24   func ,g         * 
+FILE=DefaultBuild\ad.obj
+                                  ffff0b3d  ffff0bd3        97
+  _Excep_S12AD_S12ADI0
+                                  ffff0b3d        1b   func ,g         * 
+  _initAD
+                                  ffff0b58        5b   func ,g         * 
+  _ad_port_set
+                                  ffff0bb3        21   func ,g         * 
+FILE=DefaultBuild\mtu.obj
+                                  ffff0bd4  ffff0daa       1d7
+  _Excep_MTU2_TGIA2
+                                  ffff0bd4        6f   func ,g         * 
+  _Excep_MTU0_TGIB0
+                                  ffff0c43        4b   func ,g         * 
+  _PWM_Port_Set
+                                  ffff0c8e        1e   func ,g         * 
+  _PWM_Init_Reg
+                                  ffff0cac        92   func ,g         * 
+  _Input_capture_port_set
+                                  ffff0d3e        18   func ,g         * 
+  _Input_capture_Init_Reg
+                                  ffff0d56        55   func ,g         * 
+FILE=DefaultBuild\temp_cal.obj
+                                  ffff0dab  ffff0f71       1c7
+  _slg_temp_cal
+                                  ffff0dab        83   func ,g         * 
+  _thermistor_temp_cal
+                                  ffff0e2e        61   func ,g         * 
+  _thermistor_thermo_volt
+                                  ffff0e8f        66   func ,g         * 
+  _thermo_couple_volt
+                                  ffff0ef5        4b   func ,g         * 
+  _thermo_couple_temp
+                                  ffff0f40        32   func ,g         * 
+FILE=DefaultBuild\riic_slg47011.obj
+                                  ffff0f72  ffff101e        ad
+  _slg_47011_buffer_rd
+                                  ffff0f72        65   func ,g         * 
+  _riic_rd_slg_47011
+                                  ffff0fd7        1f   func ,g         * 
+  _riic_sd_start
+                                  ffff0ff6        29   func ,g         * 
+FILE=DefaultBuild\riic_master.obj
+                                  ffff101f  ffff11c3       1a5
+  _Excep_RIIC0_EEI0
+                                  ffff101f        59   func ,g         * 
+  _Excep_RIIC0_RXI0
+                                  ffff1078        48   func ,g         * 
+  _Excep_RIIC0_TXI0
+                                  ffff10c0        2f   func ,g         * 
+  _Excep_RIIC0_TEI0
+                                  ffff10ef        10   func ,g         * 
+  _RIIC0_Init
+                                  ffff10ff        39   func ,g         * 
+  _RIIC0_Port_Set
+                                  ffff1138        1e   func ,g         * 
+  _RIIC0_Init_interrupt
+                                  ffff1156        6e   func ,g         * 
+FILE=DefaultBuild\sci1.obj
+                                  ffff11c4  ffff1559       396
+  _Excep_SCI1_RXI1
+                                  ffff11c4        52   func ,g         * 
+  _Excep_SCI1_TXI1
+                                  ffff1216         d   func ,g         * 
+  _Excep_SCI1_TEI1
+                                  ffff1223        11   func ,g         * 
+  _sci1_resp_make
+                                  ffff1234        30   func ,g         * 
+  _control_para_write
+                                  ffff1264        68   func ,g         * 
+  _control_resp_make
+                                  ffff12cc       121   func ,g         * 
+  _ctsu_resp_make
+                                  ffff13ed        a8   func ,g         * 
+  _cal_crc_sd_data
+                                  ffff1495        27   func ,g         * 
+  _SCI_1_Reg_Set
+                                  ffff14bc        1f   func ,g         * 
+  _SCI1_Init_interrupt
+                                  ffff14db        5c   func ,g         * 
+  _SCI_1_Port_Set
+                                  ffff1537        23   func ,g         * 
+FILE=DefaultBuild\crc_16.obj
+                                  ffff155a  ffff1567         e
+  _Init_CRC
+                                  ffff155a         e   func ,g         * 
+FILE=DefaultBuild\key.obj
+                                  ffff1568  ffff162e        c7
+  _touch_key_on_val
+                                  ffff1568        1c   func ,g         * 
+  _touch_key_proc
+                                  ffff1584        5c   func ,g         * 
+  _touch_key_on_mode
+                                  ffff15e0        4f   func ,g         * 
+FILE=DefaultBuild\led.obj
+                                  ffff162f  ffff1651        23
+  _led_port_ini
+                                  ffff162f        23   func ,g         * 
+FILE=DefaultBuild\control.obj
+                                  ffff1652  ffff17c2       171
+  _pid_para_ini
+                                  ffff1652        4c   func ,g         * 
+  _cal_control
+                                  ffff169e        c2   func ,g         * 
+  _cal_rpm
+                                  ffff1760        63   func ,g         * 
+FILE=DefaultBuild\alarm.obj
+                                  ffff17c3  ffff180a        48
+  _SLG_Port_Set
+                                  ffff17c3        15   func ,g         * 
+  _alarm_check
+                                  ffff17d8        33   func ,g         * 
+FILE=DefaultBuild\iwdt.obj
+                                  ffff180b  ffff1816         c
+  _IWDT_Refresh
+                                  ffff180b         c   func ,g         * 
+FILE=expf
+                                  ffff1817  ffff1933       11d
+  _poly_expf
+                                  ffff1817        62   func ,l         * 
+  _expf_special
+                                  ffff1879        22   func ,l         * 
+  _expf
+                                  ffff189b        99   func ,g         * 
+  _exp
+                                  ffff189b         0   func ,g         * 
+  _expl
+                                  ffff189b         0   func ,g         * 
+FILE=powf
+                                  ffff1934  ffff195c        29
+  _powf
+                                  ffff1934        29   func ,g         * 
+  _pow
+                                  ffff1934         0   func ,g         * 
+  _powl
+                                  ffff1934         0   func ,g         * 
+FILE=__initsct
+                                  ffff195d  ffff19a6        4a
+  __INITSCT
+                                  ffff195d         0   none ,g         * 
+  loop1
+                                  ffff196f         0   none ,l         * 
+  next_loop1
+                                  ffff197d         0   none ,l         * 
+  loop3
+                                  ffff198f         0   none ,l         * 
+  next_loop3
+                                  ffff19a0         0   none ,l         * 
+FILE=_in_pows
+                                  ffff19a7  ffff1af9       153
+  __in_pows
+                                  ffff19a7       153   func ,g         * 
+FILE=nanfval
+                                  ffff1afa  ffff1b00         7
+  ___nanf_value
+                                  ffff1afa         7   func ,g         * 
+FILE=posinff
+                                  ffff1b01  ffff1b07         7
+  ___posinff_value
+                                  ffff1b01         7   func ,g         * 
+FILE=_i_ldes
+                                  ffff1b08  ffff1b86        7f
+  __in_ldexps
+                                  ffff1b08        7f   func ,g         * 
+FILE=_in_exps
+                                  ffff1b87  ffff1c7d        f7
+  __in_exps
+                                  ffff1b87        f7   func ,g         * 
+FILE=_in_logs
+                                  ffff1c7e  ffff1d3d        c0
+  __in_logs
+                                  ffff1c7e        c0   func ,g         * 
+
+SECTION=PIntPRG
+FILE=DefaultBuild\interrupt_prg.obj
+                                  ffff1d3e  ffff1e70       133
+  _Excep_BRK
+                                  ffff1d3e         4   func ,g         * 
+  _Excep_BSC_BUSERR
+                                  ffff1d42         3   func ,g         * 
+  _Excep_FCU_FRDYI
+                                  ffff1d45         3   func ,g         * 
+  _Excep_ICU_SWINT
+                                  ffff1d48         3   func ,g         * 
+  _Excep_CAC_FERRF
+                                  ffff1d4b         3   func ,g         * 
+  _Excep_CAC_MENDF
+                                  ffff1d4e         3   func ,g         * 
+  _Excep_CAC_OVFF
+                                  ffff1d51         3   func ,g         * 
+  _Excep_RSPI0_SPEI0
+                                  ffff1d54         3   func ,g         * 
+  _Excep_RSPI0_SPRI0
+                                  ffff1d57         3   func ,g         * 
+  _Excep_RSPI0_SPTI0
+                                  ffff1d5a         3   func ,g         * 
+  _Excep_RSPI0_SPII0
+                                  ffff1d5d         3   func ,g         * 
+  _Excep_RSCAN_COMFRXINT
+                                  ffff1d60         3   func ,g         * 
+  _Excep_RSCAN_RXFINT
+                                  ffff1d63         3   func ,g         * 
+  _Excep_RSCAN_TXINT
+                                  ffff1d66         3   func ,g         * 
+  _Excep_RSCAN_CHERRINT
+                                  ffff1d69         3   func ,g         * 
+  _Excep_RSCAN_GLERRINT
+                                  ffff1d6c         3   func ,g         * 
+  _Excep_DOC_DOPCF
+                                  ffff1d6f         3   func ,g         * 
+  _Excep_CMPB_CMPB0
+                                  ffff1d72         3   func ,g         * 
+  _Excep_CMPB_CMPB1
+                                  ffff1d75         3   func ,g         * 
+  _Excep_RTC_CUP
+                                  ffff1d78         3   func ,g         * 
+  _Excep_ICU_IRQ0
+                                  ffff1d7b         3   func ,g         * 
+  _Excep_ICU_IRQ1
+                                  ffff1d7e         3   func ,g         * 
+  _Excep_ICU_IRQ2
+                                  ffff1d81         3   func ,g         * 
+  _Excep_ICU_IRQ3
+                                  ffff1d84         3   func ,g         * 
+  _Excep_ICU_IRQ4
+                                  ffff1d87         3   func ,g         * 
+  _Excep_ICU_IRQ5
+                                  ffff1d8a         3   func ,g         * 
+  _Excep_ICU_IRQ6
+                                  ffff1d8d         3   func ,g         * 
+  _Excep_ICU_IRQ7
+                                  ffff1d90         3   func ,g         * 
+  _Excep_ELC_ELSR8I
+                                  ffff1d93         3   func ,g         * 
+  _Excep_SYSTEM_SNZI
+                                  ffff1d96         3   func ,g         * 
+  _Excep_LVD_LVD1
+                                  ffff1d99         3   func ,g         * 
+  _Excep_LVD_LVD2
+                                  ffff1d9c         3   func ,g         * 
+  _Excep_RTC_ALM
+                                  ffff1d9f         3   func ,g         * 
+  _Excep_RTC_PRD
+                                  ffff1da2         3   func ,g         * 
+  _Excep_S12AD_GBADI
+                                  ffff1da5         3   func ,g         * 
+  _Excep_ELC_ELSR18I
+                                  ffff1da8         3   func ,g         * 
+  _Excep_AES_AESWRI
+                                  ffff1dab         3   func ,g         * 
+  _Excep_AES_AESRDI
+                                  ffff1dae         3   func ,g         * 
+  _Excep_TRNG_TRNGRDI
+                                  ffff1db1         3   func ,g         * 
+  _Excep_MTU0_TGIA0
+                                  ffff1db4         3   func ,g         * 
+  _Excep_MTU0_TGIC0
+                                  ffff1db7         3   func ,g         * 
+  _Excep_MTU0_TGID0
+                                  ffff1dba         3   func ,g         * 
+  _Excep_MTU0_TCIV0
+                                  ffff1dbd         3   func ,g         * 
+  _Excep_MTU0_TGIE0
+                                  ffff1dc0         3   func ,g         * 
+  _Excep_MTU0_TGIF0
+                                  ffff1dc3         3   func ,g         * 
+  _Excep_MTU1_TGIA1
+                                  ffff1dc6         3   func ,g         * 
+  _Excep_MTU1_TGIB1
+                                  ffff1dc9         3   func ,g         * 
+  _Excep_MTU1_TCIV1
+                                  ffff1dcc         3   func ,g         * 
+  _Excep_MTU1_TCIU1
+                                  ffff1dcf         3   func ,g         * 
+  _Excep_MTU2_TGIB2
+                                  ffff1dd2         3   func ,g         * 
+  _Excep_MTU2_TCIV2
+                                  ffff1dd5         3   func ,g         * 
+  _Excep_MTU2_TCIU2
+                                  ffff1dd8         3   func ,g         * 
+  _Excep_MTU3_TGIA3
+                                  ffff1ddb         3   func ,g         * 
+  _Excep_MTU3_TGIB3
+                                  ffff1dde         3   func ,g         * 
+  _Excep_MTU3_TGIC3
+                                  ffff1de1         3   func ,g         * 
+  _Excep_MTU3_TGID3
+                                  ffff1de4         3   func ,g         * 
+  _Excep_MTU3_TCIV3
+                                  ffff1de7         3   func ,g         * 
+  _Excep_MTU4_TGIA4
+                                  ffff1dea         3   func ,g         * 
+  _Excep_MTU4_TGIB4
+                                  ffff1ded         3   func ,g         * 
+  _Excep_MTU4_TGIC4
+                                  ffff1df0         3   func ,g         * 
+  _Excep_MTU4_TGID4
+                                  ffff1df3         3   func ,g         * 
+  _Excep_MTU4_TCIV4
+                                  ffff1df6         3   func ,g         * 
+  _Excep_MTU5_TGIU5
+                                  ffff1df9         3   func ,g         * 
+  _Excep_MTU5_TGIV5
+                                  ffff1dfc         3   func ,g         * 
+  _Excep_MTU5_TGIW5
+                                  ffff1dff         3   func ,g         * 
+  _Excep_POE_OEI1
+                                  ffff1e02         3   func ,g         * 
+  _Excep_POE_OEI2
+                                  ffff1e05         3   func ,g         * 
+  _Excep_TMR0_CMIA0
+                                  ffff1e08         3   func ,g         * 
+  _Excep_TMR0_CMIB0
+                                  ffff1e0b         3   func ,g         * 
+  _Excep_TMR0_OVI0
+                                  ffff1e0e         3   func ,g         * 
+  _Excep_TMR1_CMIA1
+                                  ffff1e11         3   func ,g         * 
+  _Excep_TMR1_CMIB1
+                                  ffff1e14         3   func ,g         * 
+  _Excep_TMR1_OVI1
+                                  ffff1e17         3   func ,g         * 
+  _Excep_TMR2_CMIA2
+                                  ffff1e1a         3   func ,g         * 
+  _Excep_TMR2_CMIB2
+                                  ffff1e1d         3   func ,g         * 
+  _Excep_TMR2_OVI2
+                                  ffff1e20         3   func ,g         * 
+  _Excep_TMR3_CMIA3
+                                  ffff1e23         3   func ,g         * 
+  _Excep_TMR3_CMIB3
+                                  ffff1e26         3   func ,g         * 
+  _Excep_TMR3_OVI3
+                                  ffff1e29         3   func ,g         * 
+  _Excep_SCI1_ERI1
+                                  ffff1e2c         3   func ,g         * 
+  _Excep_SCI5_ERI5
+                                  ffff1e2f         3   func ,g         * 
+  _Excep_SCI6_ERI6
+                                  ffff1e32         3   func ,g         * 
+  _Excep_SCI6_RXI6
+                                  ffff1e35         3   func ,g         * 
+  _Excep_SCI6_TXI6
+                                  ffff1e38         3   func ,g         * 
+  _Excep_SCI6_TEI6
+                                  ffff1e3b         3   func ,g         * 
+  _Excep_SCI8_ERI8
+                                  ffff1e3e         3   func ,g         * 
+  _Excep_SCI8_RXI8
+                                  ffff1e41         3   func ,g         * 
+  _Excep_SCI8_TXI8
+                                  ffff1e44         3   func ,g         * 
+  _Excep_SCI8_TEI8
+                                  ffff1e47         3   func ,g         * 
+  _Excep_SCI9_ERI9
+                                  ffff1e4a         3   func ,g         * 
+  _Excep_SCI9_RXI9
+                                  ffff1e4d         3   func ,g         * 
+  _Excep_SCI9_TXI9
+                                  ffff1e50         3   func ,g         * 
+  _Excep_SCI9_TEI9
+                                  ffff1e53         3   func ,g         * 
+  _Excep_SCI12_ERI12
+                                  ffff1e56         3   func ,g         * 
+  _Excep_SCI12_RXI12
+                                  ffff1e59         3   func ,g         * 
+  _Excep_SCI12_TXI12
+                                  ffff1e5c         3   func ,g         * 
+  _Excep_SCI12_TEI12
+                                  ffff1e5f         3   func ,g         * 
+  _Excep_SCI12_SCIX0
+                                  ffff1e62         3   func ,g         * 
+  _Excep_SCI12_SCIX1
+                                  ffff1e65         3   func ,g         * 
+  _Excep_SCI12_SCIX2
+                                  ffff1e68         3   func ,g         * 
+  _Excep_SCI12_SCIX3
+                                  ffff1e6b         3   func ,g         * 
+  _Excep_LPT_LPTCMI1
+                                  ffff1e6e         3   func ,g         * 
+
+SECTION=DTCTBL_SCI1_RCV
+FILE=DefaultBuild\dtc.obj
+                                  fffffb6c  fffffb6f         4
+  _DTC_Vector_SCI1_RCV
+                                  fffffb6c         4   data ,g         * 
+
+SECTION=DTCTBL_SCI1_SND
+FILE=DefaultBuild\dtc.obj
+                                  fffffb70  fffffb73         4
+  _DTC_Vector_SCI1_SND
+                                  fffffb70         4   data ,g         * 
+
+SECTION=EXCEPTVECT
+FILE=DefaultBuild\except_vecttbl.obj
+                                  ffffff80  fffffffb        7c
+  _Except_Vectors
+                                  ffffff80        7c   data ,g         * 
+
+SECTION=RESETVECT
+FILE=DefaultBuild\except_vecttbl.obj
+                                  fffffffc  ffffffff         4
+  _Reset_Vectors
+                                  fffffffc         4   data ,g         * 
+
+*** Unfilled Areas ***
+
+AREA                                START    END
+
+*** Delete Symbols ***
+
+SYMBOL                                SIZE    INFO
+
+*** Variable Vector Table List ***
+
+NO.    SYMBOL/ADDRESS
+  0    _Excep_BRK
+  1    _Excep_BRK
+  2    _Excep_BRK
+  3    _Excep_BRK
+  4    _Excep_BRK
+  5    _Excep_BRK
+  6    _Excep_BRK
+  7    _Excep_BRK
+  8    _Excep_BRK
+  9    _Excep_BRK
+ 10    _Excep_BRK
+ 11    _Excep_BRK
+ 12    _Excep_BRK
+ 13    _Excep_BRK
+ 14    _Excep_BRK
+ 15    _Excep_BRK
+ 16    _Excep_BSC_BUSERR
+ 17    _Excep_BRK
+ 18    _Excep_BRK
+ 19    _Excep_BRK
+ 20    _Excep_BRK
+ 21    _Excep_BRK
+ 22    _Excep_BRK
+ 23    _Excep_FCU_FRDYI
+ 24    _Excep_BRK
+ 25    _Excep_BRK
+ 26    _Excep_BRK
+ 27    _Excep_ICU_SWINT
+ 28    _Excep_CMT0_CMI0
+ 29    _Excep_CMT1_CMI1
+ 30    _Excep_BRK
+ 31    _Excep_BRK
+ 32    _Excep_CAC_FERRF
+ 33    _Excep_CAC_MENDF
+ 34    _Excep_CAC_OVFF
+ 35    _Excep_BRK
+ 36    _Excep_BRK
+ 37    _Excep_BRK
+ 38    _Excep_BRK
+ 39    _Excep_BRK
+ 40    _Excep_BRK
+ 41    _Excep_BRK
+ 42    _Excep_BRK
+ 43    _Excep_BRK
+ 44    _Excep_RSPI0_SPEI0
+ 45    _Excep_RSPI0_SPRI0
+ 46    _Excep_RSPI0_SPTI0
+ 47    _Excep_RSPI0_SPII0
+ 48    _Excep_BRK
+ 49    _Excep_BRK
+ 50    _Excep_BRK
+ 51    _Excep_BRK
+ 52    _Excep_RSCAN_COMFRXINT
+ 53    _Excep_RSCAN_RXFINT
+ 54    _Excep_RSCAN_TXINT
+ 55    _Excep_RSCAN_CHERRINT
+ 56    _Excep_RSCAN_GLERRINT
+ 57    _Excep_DOC_DOPCF
+ 58    _Excep_CMPB_CMPB0
+ 59    _Excep_CMPB_CMPB1
+ 60    _Excep_CTSU_CTSUWR
+ 61    _Excep_CTSU_CTSURD
+ 62    _Excep_CTSU_CTSUFN
+ 63    _Excep_RTC_CUP
+ 64    _Excep_ICU_IRQ0
+ 65    _Excep_ICU_IRQ1
+ 66    _Excep_ICU_IRQ2
+ 67    _Excep_ICU_IRQ3
+ 68    _Excep_ICU_IRQ4
+ 69    _Excep_ICU_IRQ5
+ 70    _Excep_ICU_IRQ6
+ 71    _Excep_ICU_IRQ7
+ 72    _Excep_BRK
+ 73    _Excep_BRK
+ 74    _Excep_BRK
+ 75    _Excep_BRK
+ 76    _Excep_BRK
+ 77    _Excep_BRK
+ 78    _Excep_BRK
+ 79    _Excep_BRK
+ 80    _Excep_ELC_ELSR8I
+ 81    _Excep_SYSTEM_SNZI
+ 82    _Excep_BRK
+ 83    _Excep_BRK
+ 84    _Excep_BRK
+ 85    _Excep_BRK
+ 86    _Excep_BRK
+ 87    _Excep_BRK
+ 88    _Excep_LVD_LVD1
+ 89    _Excep_LVD_LVD2
+ 90    _Excep_BRK
+ 91    _Excep_BRK
+ 92    _Excep_RTC_ALM
+ 93    _Excep_RTC_PRD
+ 94    _Excep_BRK
+ 95    _Excep_BRK
+ 96    _Excep_BRK
+ 97    _Excep_BRK
+ 98    _Excep_BRK
+ 99    _Excep_BRK
+100    _Excep_BRK
+101    _Excep_BRK
+102    _Excep_S12AD_S12ADI0
+103    _Excep_S12AD_GBADI
+104    _Excep_BRK
+105    _Excep_BRK
+106    _Excep_ELC_ELSR18I
+107    _Excep_BRK
+108    _Excep_BRK
+109    _Excep_BRK
+110    _Excep_BRK
+111    _Excep_AES_AESWRI
+112    _Excep_AES_AESRDI
+113    _Excep_TRNG_TRNGRDI
+114    _Excep_MTU0_TGIA0
+115    _Excep_MTU0_TGIB0
+116    _Excep_MTU0_TGIC0
+117    _Excep_MTU0_TGID0
+118    _Excep_MTU0_TCIV0
+119    _Excep_MTU0_TGIE0
+120    _Excep_MTU0_TGIF0
+121    _Excep_MTU1_TGIA1
+122    _Excep_MTU1_TGIB1
+123    _Excep_MTU1_TCIV1
+124    _Excep_MTU1_TCIU1
+125    _Excep_MTU2_TGIA2
+126    _Excep_MTU2_TGIB2
+127    _Excep_MTU2_TCIV2
+128    _Excep_MTU2_TCIU2
+129    _Excep_MTU3_TGIA3
+130    _Excep_MTU3_TGIB3
+131    _Excep_MTU3_TGIC3
+132    _Excep_MTU3_TGID3
+133    _Excep_MTU3_TCIV3
+134    _Excep_MTU4_TGIA4
+135    _Excep_MTU4_TGIB4
+136    _Excep_MTU4_TGIC4
+137    _Excep_MTU4_TGID4
+138    _Excep_MTU4_TCIV4
+139    _Excep_MTU5_TGIU5
+140    _Excep_MTU5_TGIV5
+141    _Excep_MTU5_TGIW5
+142    _Excep_BRK
+143    _Excep_BRK
+144    _Excep_BRK
+145    _Excep_BRK
+146    _Excep_BRK
+147    _Excep_BRK
+148    _Excep_BRK
+149    _Excep_BRK
+150    _Excep_BRK
+151    _Excep_BRK
+152    _Excep_BRK
+153    _Excep_BRK
+154    _Excep_BRK
+155    _Excep_BRK
+156    _Excep_BRK
+157    _Excep_BRK
+158    _Excep_BRK
+159    _Excep_BRK
+160    _Excep_BRK
+161    _Excep_BRK
+162    _Excep_BRK
+163    _Excep_BRK
+164    _Excep_BRK
+165    _Excep_BRK
+166    _Excep_BRK
+167    _Excep_BRK
+168    _Excep_BRK
+169    _Excep_BRK
+170    _Excep_POE_OEI1
+171    _Excep_POE_OEI2
+172    _Excep_BRK
+173    _Excep_BRK
+174    _Excep_TMR0_CMIA0
+175    _Excep_TMR0_CMIB0
+176    _Excep_TMR0_OVI0
+177    _Excep_TMR1_CMIA1
+178    _Excep_TMR1_CMIB1
+179    _Excep_TMR1_OVI1
+180    _Excep_TMR2_CMIA2
+181    _Excep_TMR2_CMIB2
+182    _Excep_TMR2_OVI2
+183    _Excep_TMR3_CMIA3
+184    _Excep_TMR3_CMIB3
+185    _Excep_TMR3_OVI3
+186    _Excep_BRK
+187    _Excep_BRK
+188    _Excep_BRK
+189    _Excep_BRK
+190    _Excep_BRK
+191    _Excep_BRK
+192    _Excep_BRK
+193    _Excep_BRK
+194    _Excep_BRK
+195    _Excep_BRK
+196    _Excep_BRK
+197    _Excep_BRK
+198    _Excep_BRK
+199    _Excep_BRK
+200    _Excep_BRK
+201    _Excep_BRK
+202    _Excep_BRK
+203    _Excep_BRK
+204    _Excep_BRK
+205    _Excep_BRK
+206    _Excep_BRK
+207    _Excep_BRK
+208    _Excep_BRK
+209    _Excep_BRK
+210    _Excep_BRK
+211    _Excep_BRK
+212    _Excep_BRK
+213    _Excep_BRK
+214    _Excep_BRK
+215    _Excep_BRK
+216    _Excep_BRK
+217    _Excep_BRK
+218    _Excep_SCI1_ERI1
+219    _Excep_SCI1_RXI1
+220    _Excep_SCI1_TXI1
+221    _Excep_SCI1_TEI1
+222    _Excep_SCI5_ERI5
+223    _Excep_BRK
+224    _Excep_BRK
+225    _Excep_BRK
+226    _Excep_SCI6_ERI6
+227    _Excep_SCI6_RXI6
+228    _Excep_SCI6_TXI6
+229    _Excep_SCI6_TEI6
+230    _Excep_SCI8_ERI8
+231    _Excep_SCI8_RXI8
+232    _Excep_SCI8_TXI8
+233    _Excep_SCI8_TEI8
+234    _Excep_SCI9_ERI9
+235    _Excep_SCI9_RXI9
+236    _Excep_SCI9_TXI9
+237    _Excep_SCI9_TEI9
+238    _Excep_SCI12_ERI12
+239    _Excep_SCI12_RXI12
+240    _Excep_SCI12_TXI12
+241    _Excep_SCI12_TEI12
+242    _Excep_SCI12_SCIX0
+243    _Excep_SCI12_SCIX1
+244    _Excep_SCI12_SCIX2
+245    _Excep_SCI12_SCIX3
+246    _Excep_RIIC0_EEI0
+247    _Excep_RIIC0_RXI0
+248    _Excep_RIIC0_TXI0
+249    _Excep_RIIC0_TEI0
+250    _Excep_BRK
+251    _Excep_BRK
+252    _Excep_BRK
+253    _Excep_BRK
+254    _Excep_BRK
+255    _Excep_LPT_LPTCMI1
